@@ -1,11 +1,11 @@
 class Asignatura:
 
-    def __init__(self, nombre, salon=None):
+    def __init__(self, nombre, salon="remoto"):
         self._nombre = nombre
         self._salon = salon
 
     def __str__(self):
-        if self._salon==None:
+        if self._salon=="remoto":
             cadena=self._nombre+" Remoto"
             return cadena
         else:
