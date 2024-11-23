@@ -6,7 +6,7 @@ class Asignatura:
 
     def __str__(self):
         if self._salon=="remoto":
-            cadena=self._nombre+" Remoto"
+            cadena=self._nombre+" remoto"
             return cadena
         else:
             cadena=self._nombre+" "+self._salon
