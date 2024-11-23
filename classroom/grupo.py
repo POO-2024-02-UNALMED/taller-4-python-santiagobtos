@@ -3,7 +3,7 @@ from classroom.asignatura import Asignatura
 class Grupo:
     grado = "grado 12"
 
-    def __init__(self, grupo="grupo ordinado", asignaturas=[], estudiantes=[]):
+    def __init__(self, grupo="grupo predeterminado", asignaturas=[], estudiantes=[]):
         self._grupo = grupo
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes
@@ -17,7 +17,7 @@ class Grupo:
         self.listadoAlumnos = self.listadoAlumnos + lista
 
     def __str__(self):
-        if self._grupo== "grupo ordinado":
+        if self._grupo== "grupo predeterminado":
             cadena= "Grupo de estudiantes: grupo predeterminado"
             return cadena
         else :
