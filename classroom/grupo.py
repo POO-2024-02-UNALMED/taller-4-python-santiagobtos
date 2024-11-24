@@ -5,8 +5,8 @@ class Grupo:
 
     def __init__(self, grupo="grupo ordinado", asignaturas=None, estudiantes=None  ):
         self._grupo = grupo
-        self.asignaturas = asignaturas if asignaturas is not None else []
-        self.listadoAlumnos = estudiantes if estudiantes is not None else []
+        self._asignaturas = asignaturas if asignaturas is not None else []
+        self._listadoAlumnos = estudiantes if estudiantes is not None else []
 
     def listadoAsignaturas(self, **kwargs):
         for x in kwargs.values():
@@ -17,8 +17,8 @@ class Grupo:
             lista = []
         lista.append(alumno)
         for elemento in lista:
-            if elemento not in self.listadoAlumnos:
-                self.listadoAlumnos.append(elemento)
+            if elemento not in self._listadoAlumnos:
+                self._listadoAlumnos.append(elemento)
 
     def __str__(self):
         if self._grupo== "grupo ordinado":
